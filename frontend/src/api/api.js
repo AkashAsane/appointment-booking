@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-const API_BASE = 'http://localhost:8080/api';
+const API_BASE = 'https://appointment-booking-wcit.onrender.com/api';
 
 export const fetchDoctors = async () => {
     const response = await axios.get(`${API_BASE}/doctors`);
@@ -16,7 +15,6 @@ export const fetchSlots = async (doctorId, date) => {
         throw error;
     }
 };
-
 
 export const fetchAppointments = async () => {
     const response = await axios.get(`${API_BASE}/appointments`);
