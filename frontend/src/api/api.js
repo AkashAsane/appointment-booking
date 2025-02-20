@@ -10,7 +10,7 @@ export const fetchDoctors = async () => {
 export const fetchSlots = async (doctorId, date) => {
     try {
         const response = await axios.get(`${API_BASE}/doctors/${doctorId}/slots`, { params: { date } });
-        return response.data; // Slots should be returned as plain time strings like "08:30"
+        return response.data; 
     } catch (error) {
         console.error('Error fetching slots:', error.response?.data || error.message);
         throw error;
